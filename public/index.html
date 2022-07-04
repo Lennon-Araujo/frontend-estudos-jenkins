@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="page" id="loginPage">
+            <div class="logo">
+                <img src="./assets/img/logo.png" alt="logo">
+            </div>
+            <h1>Bate-papo</h1>
+            <h3>Digite seu nome de usuário</h3>
+            <input type="text" id="loginNameInput" placeholder="Digite seu nome de usuário e pressione enter"/>
+        </div>
+
+        <div class="page" id="chatPage">
+            <div class="chatArea">
+                <ul class="chatList"></ul>
+                <ul class="userList"></ul>
+            </div>
+            <div class="chatInput">
+                <input type="text" id="chatTextInput"
+                    placeholder="Digite uma mensagem (pressione a tecla ENTER para enviar)" />
+                <input type="button" value="Administradores" onclick="getContent()">
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
