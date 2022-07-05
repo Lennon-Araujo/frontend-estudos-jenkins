@@ -2,12 +2,12 @@ FROM node:14-alpine
 
 USER root
 
-WORKDIR /usr/chat/app
+RUN mkdir -p /usr/src/app
 
-COPY package*.json ./
+WORKDIR /usr/src/app
 
-RUN npm install --silent
+COPY package*.json /usr/src/app/
 
-COPY . .
+RUN npm install
 
-EXPOSE 8000
+COPY . /usr/src/app
